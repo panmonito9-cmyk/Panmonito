@@ -1,0 +1,314 @@
+/* Tailwind Font Size Scale */
+
+.text-xs {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+}
+
+.text-5xl {
+  font-size: 3rem; /* 48px */
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem; /* 60px */
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem; /* 72px */
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem; /* 96px */
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem; /* 128px */
+  line-height: 1;
+}
+
+
+/* =========================================================
+   ESTILOS DE SECCIÓN: SOBRE NOSOTROS & MAQUETACIÓN
+   ========================================================= */
+.fondo-secundario {
+  background-color: #f9f8f5;
+  color: #1f2937;
+  padding: 4.5rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contenedor-seccion {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.col-span-5 {
+  grid-column: span 5;
+}
+
+.col-span-7 {
+  grid-column: span 7;
+}
+
+/* Responsividad para móviles y tabletas */
+@media (max-width: 840px) {
+  .cuadricula {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .col-span-5,
+  .col-span-7 {
+    grid-column: span 1;
+  }
+}
+
+.sobre-nosotros-img-box {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  aspect-ratio: 4 / 3;
+}
+
+.sobre-nosotros-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === ESTILOS VISUALES: IMAGEN Y DESCRIPCIÓN (PASO 3) === */
+.contenedor-imagen {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.imagen-estudio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.02);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contenedor-imagen:hover .imagen-estudio {
+  transform: scale(1.03);
+}
+
+.descripcion {
+  color: rgba(45, 42, 38, 0.8);
+  font-style: italic;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  border-left: 2px solid #d6a284;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.sobre-nosotros-textos h2,
+.sobre-nosotros-texto h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.sobre-nosotros-textos p,
+.sobre-nosotros-texto p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+}
+
+.sobre-nosotros-textos p:last-child,
+.sobre-nosotros-texto p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* === ESTILOS PERSONALIZADOS PASO 3 === */
+/* =========================================================
+   ESTILOS VISUALES GENERADOS (PASO 3)
+   ========================================================= */
+/* Contenedor que empaqueta la imagen */
+.contenedor-imagen {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de estudio con suavizado y transición */
+.imagen-estudio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.02);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.contenedor-imagen:hover .imagen-estudio {
+  transform: scale(1.04);
+}
+
+/* Contenedor de textos */
+.sobre-nosotros-textos {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo del título */
+.sobre-nosotros-textos h2,
+.sobre-nosotros-texto h2 {
+  color: #fa1100;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Párrafos generales y distancia uniforme entre párrafos */
+.sobre-nosotros-textos p,
+.sobre-nosotros-texto p {
+  color: #111827;
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
+
+.sobre-nosotros-textos p:last-child,
+.sobre-nosotros-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* Párrafo con estilo editorial y borde lateral (último párrafo) */
+.descripcion {
+  color: #111827;
+  font-style: italic;
+  font-weight: normal;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  border-left: 2px solid #d6a284;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-bottom: 20px;
+}
+/* =========================================================
+   ESTILOS VISUALES GENERADOS (PASO 3)
+   ========================================================= */
+/* Contenedor que empaqueta la imagen */
+.contenedor-imagen {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Imagen de estudio con suavizado y transición */
+.imagen-estudio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(1.02);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.contenedor-imagen:hover .imagen-estudio {
+  transform: scale(1.04);
+}
+
+/* Contenedor de textos */
+.sobre-nosotros-textos {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo del título */
+.sobre-nosotros-textos h2,
+.sobre-nosotros-texto h2 {
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Párrafos generales y distancia uniforme entre párrafos */
+.sobre-nosotros-textos p,
+.sobre-nosotros-texto p {
+  color: #374151;
+  margin-bottom: 20px;
+  line-height: 1.65;
+}
+
+.sobre-nosotros-textos p:last-child,
+.sobre-nosotros-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* Párrafo con estilo editorial y borde lateral (último párrafo) */
+.descripcion {
+  color: rgba(45, 42, 38, 0.8);
+  font-style: italic;
+  font-weight: normal;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  border-left: 2px solid #d6a284;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin-bottom: 20px;
+}

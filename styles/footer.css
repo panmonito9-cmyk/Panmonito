@@ -1,0 +1,136 @@
+/* =========================================================
+   ESTILOS DEL PIE DE PÁGINA (FOOTER)
+   ========================================================= */
+
+.sitio-footer {
+  background-color: var(--fondo-secundario, #F4EFE6);
+  color: #1f2937;
+  padding: 4rem 1.5rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contenedor-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Grilla de Columnas según la estructura (3 columnas) */
+.sitio-footer .contenedor-footer:first-child {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Marca o Título Principal */
+.footer-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-secundario, #D6A284);
+  letter-spacing: -0.01em;
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #64748b;
+  max-width: 360px;
+}
+
+/* Títulos de Columna */
+.footer-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #1f2937;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-secundario, #D6A284);
+  border-radius: 2px;
+}
+
+/* Listas de Enlaces y Datos */
+.footer-links,
+.footer-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--color-secundario, #D6A284);
+  transform: translateX(4px);
+}
+
+.footer-info li {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Estilos de Columna Central para 1 Columna */
+.footer-col-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-col-center .footer-desc {
+  max-width: 540px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Barra Inferior de Copyright */
+.footer-bottom {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Responsividad para móviles y tablets */
+@media (max-width: 840px) {
+  .sitio-footer .contenedor-footer:first-child {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

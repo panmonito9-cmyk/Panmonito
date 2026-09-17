@@ -1,0 +1,216 @@
+/* =========================================================
+   ESTILOS DE LA BARRA DE NAVEGACIÓN (navbar.css)
+   ========================================================= */
+
+/* Desplazamiento automático suave hacia todas las secciones */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Barra de navegación superior fija */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background-color: transparent;
+  
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Estado cuando el usuario hace scroll hacia abajo pasando el Hero */
+.navbar.navbar-scrolled {
+  background-color: #355C5D !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor centralizado para mantener alineación del contenido */
+.contenedor-navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo o Marca */
+.navbar-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--fuente-moderna, sans-serif);
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: opacity 0.25s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.85;
+}
+
+/* Menú y lista de enlaces */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.925rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Línea animada sutil bajo los enlaces */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #D6A284;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Enlace estilo botón de acción (opcional) */
+.nav-link-btn {
+  background-color: #D6A284;
+  color: #ffffff !important;
+  padding: 0.45rem 1.15rem !important;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.nav-link-btn::after {
+  display: none;
+}
+
+.nav-link-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   ESTILOS RESPONSIVE PARA DISPOSITIVOS MÓVILES Y TABLETS
+   ========================================================= */
+
+/* Botón Hamburguesa (oculto en pantallas de escritorio) */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 1002;
+  border-radius: 6px;
+  outline: none;
+}
+
+.navbar-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  /* Mostrar botón de hamburguesa en móvil */
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  /* Animación de las 3 barras a una 'X' al abrir */
+  .navbar-toggle.active span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  .navbar-toggle.active span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  /* Menú desplegable móvil */
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: #355C5D;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    gap: 1.75rem;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  /* Estado abierto del menú móvil */
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    display: inline-block;
+    font-size: 1.15rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .nav-link-btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 2rem !important;
+  }
+}
