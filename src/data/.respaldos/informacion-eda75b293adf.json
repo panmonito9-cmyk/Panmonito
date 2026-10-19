@@ -1,0 +1,12 @@
+{
+  "nombre": "Panmonito",
+  "telefono": "+57 300 123 4567",
+  "whatsapp": "573001234567",
+  "email": "contacto@tiendaescolar.com",
+  "direccion": "Av. Principal #123, Ciudad Escolar",
+  "horario": "Lunes a Viernes: 9:00 AM - 7:00 PM",
+  "redesSociales": {
+    "instagram": "@tiendaescolar",
+    "facebook": "facebook.com/tiendaescolar"
+  }
+}

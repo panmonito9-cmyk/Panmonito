@@ -1,0 +1,38 @@
+{
+  "predeterminada": {
+    "--color-primario": "#355C5D",
+    "--color-fondo": "#355C5D",
+    "--color-fondo-secundario": "#F4EFE6",
+    "--color-titulos": "#2D2A26",
+    "--color-secundario": "#D6A284",
+    "--color-parrafos": "#1F1717",
+    "--paleta-suave": "#F4EFE6"
+  },
+  "paleta 1": {
+    "--color-primario": "#553426",
+    "--color-fondo": "#39271F",
+    "--color-fondo-secundario": "#FFF6E8",
+    "--color-titulos": "#39271F",
+    "--color-secundario": "#E7AF68",
+    "--color-parrafos": "#513E32",
+    "--paleta-suave": "#F3E3CC"
+  },
+  "paleta 2": {
+    "--color-primario": "#704D36",
+    "--color-fondo": "#704D36",
+    "--color-fondo-secundario": "#FFFBF4",
+    "--color-titulos": "#4B3022",
+    "--color-secundario": "#EC9BB3",
+    "--color-parrafos": "#543A2B",
+    "--paleta-suave": "#FBE3EA"
+  },
+  "paleta 3": {
+    "--color-primario": "#27543D",
+    "--color-fondo": "#183E31",
+    "--color-fondo-secundario": "#FAF7E8",
+    "--color-titulos": "#183E31",
+    "--color-secundario": "#EAC563",
+    "--color-parrafos": "#354339",
+    "--paleta-suave": "#E3EBCF"
+  }
+}

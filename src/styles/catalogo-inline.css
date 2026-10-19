@@ -1,0 +1,7 @@
+
+/* Touch screens must expose the same product information as desktop hover. */
+@media (max-width: 640px), (hover: none) {
+:where(body[data-svelte-page="catalogo"], body[data-svelte-page="catalogo"] *):is(.card-overlay-hover .card-capa-hover){ opacity: 1 !important; transform: translateY(0) !important; }
+:where(body[data-svelte-page="catalogo"], body[data-svelte-page="catalogo"] *):is(.card-overlay-hover .card-badge-flotante){ opacity: 0 !important; }
+:where(body[data-svelte-page="catalogo"], body[data-svelte-page="catalogo"] *):is(.card-overlay-hover .card-img-box img){ transform: scale(1.1); }
+}

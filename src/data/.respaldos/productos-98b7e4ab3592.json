@@ -1,0 +1,44 @@
+[
+  {
+    "id": "croisssant-chocomonito-1",
+    "nombre": "Croisssant ChocoMonito",
+    "imagen": "imagenes/producto1.jpg",
+    "precio": "$15.000",
+    "descripcion": "Capas de hojaldre doradas con un corazon de chocolate cremoso.\n                  Crujiente, dulce y peligrosamente facil de terminar"
+  },
+  {
+    "id": "monito-tiramisu-2",
+    "nombre": "Monito Tiramisu",
+    "imagen": "imagenes/producto2.jpg",
+    "precio": "$20.000",
+    "descripcion": "Capas suaves y cremosas con el delicado sabor del cafe y un\n                  toque de cacao. Un postre elegante para darse un gusto"
+  },
+  {
+    "id": "frappe-monito-3",
+    "nombre": "Frappe Monito",
+    "imagen": "imagenes/producto3.jpg",
+    "precio": "$16.000",
+    "descripcion": "Bebida fria, cremosa y refrescante, preparada para acompañar\n                  tus antojos mas dulces."
+  },
+  {
+    "nombre": "MonitoBanana",
+    "precio": "$12.000",
+    "descripcion": "un pastelito relleno de crema de banano, decorado con una carita de monito.",
+    "id": "monitobanana-1",
+    "imagen": "imagenes/monitobanana-1-7dc17c43.jpeg"
+  },
+  {
+    "nombre": "ChocoMonito",
+    "precio": "$16.000",
+    "descripcion": "un bizcocho de chocolate con forma de monito, ideal para los amantes del cacao.",
+    "id": "chocomonito-1",
+    "imagen": "imagenes/chocomonito-1-207fcbc3.jpeg"
+  },
+  {
+    "nombre": "LatteMonito",
+    "precio": "$20.000",
+    "descripcion": "una bebida especial de café con espuma decorada con la silueta de un monito.",
+    "id": "lattemonito-1",
+    "imagen": "imagenes/lattemonito-1-3d864636.jpeg"
+  }
+]

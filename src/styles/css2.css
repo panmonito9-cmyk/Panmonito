@@ -1,0 +1,210 @@
+/* REFERENCIA: version rosa aprobada. No se carga actualmente.
+   La paleta activa esta en styles.css. Para probar esta version,
+   agrega un link a styles/css2.css al final del head en index.html. */
+/* Paleta Panmonito inspirada en el logo.
+   Crema y chocolate: fondos y textos.
+   Coral, miel y caramelo: acentos y detalles.
+   Cargar este archivo despues de las otras hojas de estilo. */
+:root {
+  --panmonito-crema: #FFF2E2;
+  --panmonito-marfil: #FFFAF3;
+  --panmonito-caramelo-fondo: #8B512E;
+  --panmonito-chocolate: #632B0B;
+  --panmonito-caramelo: #A65B2A;
+  --panmonito-miel: #E9A448;
+  --panmonito-coral: #F47765;
+  --panmonito-rosa: #FFAAA0;
+  --panmonito-rosa-pastel: #F7DDD6;
+  --panmonito-coral-oscuro: #A83F30;
+  --panmonito-borde: #EACDB0;
+
+  /* Compatibilidad con las variables actuales de la pagina. */
+  --color-fondo: var(--panmonito-rosa-pastel);
+  --color-fondo-secundario: var(--panmonito-crema);
+  --color-primario: var(--panmonito-chocolate);
+  --color-titulos: var(--panmonito-chocolate);
+  --color-secundario: var(--panmonito-coral);
+  --color-parrafos: #482A1B;
+}
+
+body {
+  background-color: var(--panmonito-marfil);
+  color: var(--color-parrafos);
+}
+
+.fondo-principal {
+  color: var(--panmonito-chocolate);
+}
+
+.fondo-principal .contenedor-texto h1,
+.fondo-principal .contenedor-texto p {
+  color: var(--panmonito-chocolate);
+}
+
+.fondo-principal .boton-blanco {
+  border-color: var(--panmonito-chocolate);
+  color: var(--panmonito-chocolate);
+}
+
+.fondo-secundario {
+  color: var(--color-parrafos);
+}
+
+/* El chocolate mantiene legibles los botones sobre el coral. */
+.boton-secundario {
+  background-color: var(--panmonito-coral);
+  color: var(--panmonito-chocolate);
+}
+
+.boton-secundario:hover {
+  background-color: var(--panmonito-rosa);
+}
+
+/* Para texto de acento sobre fondos claros. */
+.texto-coral {
+  color: var(--panmonito-coral-oscuro);
+}
+
+.fondo-crema {
+  background-color: var(--panmonito-crema);
+  color: var(--panmonito-chocolate);
+}
+
+.fondo-miel {
+  background-color: var(--panmonito-miel);
+  color: var(--panmonito-chocolate);
+}
+
+/* Acabado uniforme para la version rosa pastel. */
+.navbar,
+.navbar.navbar-scrolled {
+  background-color: var(--panmonito-marfil) !important;
+  box-shadow: 0 2px 16px rgba(99, 43, 11, 0.06);
+}
+
+.navbar-logo,
+.nav-link {
+  color: var(--panmonito-chocolate);
+}
+
+.nav-link:hover {
+  color: var(--panmonito-coral-oscuro);
+}
+
+.nav-link-btn,
+.boton-secundario {
+  background-color: var(--panmonito-chocolate);
+  color: var(--panmonito-marfil) !important;
+}
+
+.boton-secundario:hover {
+  background-color: var(--panmonito-caramelo);
+}
+
+.boton {
+  border-radius: 12px;
+}
+
+.navbar-toggle span {
+  background-color: var(--panmonito-chocolate);
+}
+
+#catalogo .catalogo-header span,
+#catalogo .catalogo-header h2,
+#catalogo .catalogo-item h3 {
+  color: var(--panmonito-chocolate) !important;
+}
+
+#catalogo .catalogo-item p {
+  color: var(--color-parrafos) !important;
+}
+
+#catalogo .informacion-producto span {
+  color: var(--panmonito-coral-oscuro) !important;
+}
+
+.catalogo-item {
+  background-color: var(--panmonito-marfil);
+  border-color: var(--panmonito-borde);
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    background-color: var(--panmonito-marfil);
+  }
+}
+
+/* Hero compacto: texto e imagen con proporciones equilibradas. */
+.seccion-heroe {
+  min-height: auto;
+  padding: 134px 24px 72px;
+}
+
+.contenedor-heroe {
+  max-width: 1180px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  padding: 0;
+}
+
+.contenedor-heroe > .col-span-5,
+.contenedor-heroe > .col-span-7 {
+  grid-column: auto;
+}
+
+.contenedor-heroe .contenedor-texto {
+  gap: 24px;
+}
+
+.contenedor-heroe h1 {
+  font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 12ch;
+  text-wrap: balance;
+}
+
+.contenedor-heroe p {
+  max-width: 46ch;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contenedor-heroe .contenedor-boton {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contenedor-heroe .boton {
+  flex: 0 1 auto;
+  padding: 16px 22px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.contenedor-heroe .heroe-imagen {
+  aspect-ratio: 1.15 / 1;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(99, 43, 11, 0.12);
+}
+
+@media (max-width: 760px) {
+  .seccion-heroe {
+    padding: 110px 22px 48px;
+  }
+
+  .contenedor-heroe {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contenedor-heroe h1 {
+    max-width: 16ch;
+  }
+
+  .contenedor-heroe .heroe-imagen {
+    aspect-ratio: 4 / 3;
+    border-radius: 18px;
+  }
+}

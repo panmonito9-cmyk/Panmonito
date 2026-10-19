@@ -1,0 +1,23 @@
+[
+  {
+    "id": "croisssant-chocomonito-1",
+    "nombre": "Croisssant ChocoMonito",
+    "imagen": "imagenes/producto1.jpg",
+    "precio": "$15.000",
+    "descripcion": "Capas de hojaldre doradas con un corazon de chocolate cremoso.\n                  Crujiente, dulce y peligrosamente facil de terminar"
+  },
+  {
+    "id": "monito-tiramisu-2",
+    "nombre": "Monito Tiramisu",
+    "imagen": "imagenes/producto2.jpg",
+    "precio": "$20.000",
+    "descripcion": "Capas suaves y cremosas con el delicado sabor del cafe y un\n                  toque de cacao. Un postre elegante para darse un gusto"
+  },
+  {
+    "id": "frappe-monito-3",
+    "nombre": "Frappe Monito",
+    "imagen": "imagenes/producto3.jpg",
+    "precio": "$16.000",
+    "descripcion": "Bebida fria, cremosa y refrescante, preparada para acompañar\n                  tus antojos mas dulces."
+  }
+]

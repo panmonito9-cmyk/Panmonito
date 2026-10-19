@@ -1,0 +1,64 @@
+@import "./styles.css";
+
+
+.centrar-items{
+  align-items: center;
+}
+.boton {
+  padding: 18px 32px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+}
+.boton-secundario{
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+}
+
+.boton-blanco{
+  border: 1px solid var(--color-blanco);
+  color: var(--color-blanco);
+}
+.contenedor-seccion{
+  max-width: 1280px;
+  margin: auto;
+}
+.cuadricula{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap:30px;
+}
+.col-span-5{
+  grid-column: span 5;
+}
+.col-span-7{
+  grid-column: span 7;
+}
+.cursiva{
+  font-style: italic;
+}
+.text-secundario{
+  color: var(--color-secundario);
+}
+.fuente-elegante{
+font-family: var(--fuente-elegante);
+}
+.fondo-principal{
+  color:var(--color-blanco);
+  background-color: var(--color-fondo);
+}
+
+:root {
+  --color-primario: #704D36;
+  --color-fondo: #704D36;
+  --color-fondo-secundario: #FFFBF4;
+  --color-titulos: #4B3022;
+  --color-secundario: #EC9BB3;
+  --color-parrafos: #543A2B;
+  --paleta-suave: #FBE3EA;
+}

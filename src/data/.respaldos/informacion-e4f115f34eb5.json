@@ -1,0 +1,12 @@
+{
+  "nombre": "Panmonito",
+  "telefono": "+57 323 5253215",
+  "whatsapp": "+57 323 5253215",
+  "email": "panmonito9@gmail.com",
+  "direccion": "Cra. 6 #77-70",
+  "horario": "Lunes a Viernes: 6:00 AM - 9:00 PM",
+  "redesSociales": {
+    "instagram": "@Panmonito",
+    "facebook": "Panmonito"
+  }
+}
