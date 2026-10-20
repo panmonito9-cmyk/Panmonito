@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/contacto.js": {
+      "includeFiles": "emails/**",
+      "maxDuration": 60
+    }
+  }
+}
