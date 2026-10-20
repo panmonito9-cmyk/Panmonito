@@ -29,7 +29,7 @@
       if (!response.ok || !result?.ok) throw new Error(result?.error || 'No pudimos enviar el mensaje. Inténtalo más tarde.');
       statusMessage = result.confirmationSent === false
         ? 'Recibimos tu mensaje. Te responderemos al correo que indicaste; no necesitas enviarlo otra vez.'
-        : '¡Mensaje enviado! Revisa tu correo y la carpeta de spam para ver la confirmación.';
+        : 'Gracias por escribirnos. Recibimos tu consulta. Revisa tu correo y la carpeta de spam para ver la confirmación.';
       form.reset();
       startedAt = Date.now();
     } catch (error) {
@@ -100,7 +100,12 @@
               <button type="submit" class="boton-enviar-contacto" disabled={sending}>
                 <span>{sending ? 'Enviando…' : 'Enviar Mensaje'}</span>
               </button>
-              <p class="contacto-estado" class:contacto-error={hasError} role="status" aria-live="polite" aria-atomic="true">{statusMessage}</p>
+              <div class="contacto-aviso" class:contacto-aviso-error={hasError} class:contacto-aviso-enviando={sending} class:contacto-aviso-visible={Boolean(statusMessage)} role="status" aria-live="polite" aria-atomic="true">
+ {#if statusMessage}
+ <span class="contacto-aviso-icono" aria-hidden="true">{sending ? '…' : hasError ? '!' : '✓'}</span>
+ <div><strong>{sending ? 'Enviando tu mensaje' : hasError ? 'No se pudo enviar' : '¡Mensaje enviado!'}</strong><p>{statusMessage}</p></div>
+ {/if}
+ </div>
       </form>
           </div>
         </div>
@@ -111,4 +116,16 @@
   .contacto-estado:empty { display: none; }
   .contacto-error { font-weight: 600; }
   .boton-enviar-contacto:disabled { opacity: 0.65; cursor: wait; }
+
+
+.contacto-aviso { display: none; }
+.contacto-aviso-visible { display:flex; align-items:flex-start; gap:14px; padding:20px; border:1px solid #b8d8c8; border-radius:14px; background:#eff8f3; color:#184b37; text-align:left; }
+.contacto-aviso-icono { display:flex; align-items:center; justify-content:center; width:32px; height:32px; flex:0 0 32px; border-radius:50%; background:#d5ecdf; font-size:20px; font-weight:700; }
+.contacto-aviso strong { display:block; font-size:16px; line-height:1.5; }
+.contacto-aviso p { margin:5px 0 0; font-size:14px; line-height:1.6; color:inherit; overflow-wrap:anywhere; }
+.contacto-aviso-error { background:#fff3f1; color:#8b2922; border-color:#edc2bc; }
+.contacto-aviso-error .contacto-aviso-icono { background:#f8dcd6; }
+.contacto-aviso-enviando { background:#f4f5f7; color:#354052; border-color:#d6dce5; }
+.contacto-aviso-enviando .contacto-aviso-icono { background:#e2e6ec; }
+@media (max-width:480px) { .contacto-aviso-visible { padding:16px; gap:10px; } }
 </style>
