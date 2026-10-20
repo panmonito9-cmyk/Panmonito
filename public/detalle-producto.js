@@ -81,19 +81,21 @@
         }
       }
 
-      // Título clicable
+      // Preserve the heading and expose navigation as a native link.
       if (tituloEl && !tituloEl.dataset.detailBound) {
         tituloEl.dataset.detailBound = 'true';
-        tituloEl.classList.add('catalogo-titulo-clicable');
-        tituloEl.setAttribute('role', 'button');
-        tituloEl.setAttribute('tabindex', '0');
-        tituloEl.setAttribute('title', 'Ver página de detalle de este producto');
-        tituloEl.addEventListener('click', abrirPaginaDetalle);
-        tituloEl.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            abrirPaginaDetalle(e);
-          }
-        });
+        var enlace = document.createElement('a');
+        enlace.className = 'catalogo-titulo-clicable';
+        enlace.href = construirUrl();
+        enlace.style.color = 'inherit';
+        enlace.style.font = 'inherit';
+        enlace.style.textDecoration = 'none';
+        enlace.textContent = tituloEl.textContent;
+        if (CONFIG.openInNewTab) {
+          enlace.target = '_blank';
+          enlace.rel = 'noopener noreferrer';
+        }
+        tituloEl.replaceChildren(enlace);
       }
     });
   }
@@ -104,11 +106,4 @@
     vincularCatalogoADetalle();
   }
 
-  if (window.MutationObserver) {
-    var obs = new MutationObserver(function () {
-      vincularCatalogoADetalle();
-    });
-    var sec = document.getElementById('catalogo') || document.body;
-    obs.observe(sec, { childList: true, subtree: true });
-  }
 })();

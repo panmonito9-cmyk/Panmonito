@@ -36,22 +36,22 @@
               <div class="fila-formulario">
                 <div class="campo-grupo">
                   <label for="nombre">Nombre Completo</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Ej. Alex Martínez" required="">
+                  <input type="text" id="nombre" name="nombre" placeholder="Ej. Alex Martínez" required>
                 </div>
                 <div class="campo-grupo">
                   <label for="email">Correo Electrónico</label>
-                  <input type="email" id="email" name="email" placeholder="alex@ejemplo.com" required="">
+                  <input type="email" id="email" name="email" placeholder="alex@ejemplo.com" required>
                 </div>
               </div>
 
               <div class="campo-grupo">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Ej. +57 300 123 4567" required="">
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel" placeholder="Ej. +57 300 123 4567" required>
               </div>
 
               <div class="campo-grupo">
                 <label for="mensaje">¿Cómo podemos ayudarte?</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..." required=""></textarea>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
               </div>
 
               <button type="submit" class="boton-enviar-contacto">

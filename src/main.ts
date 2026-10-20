@@ -1,3 +1,4 @@
+import './styles/fonts.css';
 import './styles/app.css';
 import './pages/home/section/heroe/heroe.css';
 import './pages/home/section/sobrenosotros/sobrenosotros.css';

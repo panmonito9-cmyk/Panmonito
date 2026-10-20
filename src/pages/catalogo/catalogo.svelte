@@ -52,9 +52,9 @@
 <svelte:head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Explora nuestros productos • Catálogo Oficial</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"></svelte:head>
+
+
+</svelte:head>
 
 
   <!-- 1. Header / Navbar Original del Proyecto (index.html) -->
@@ -74,7 +74,7 @@
         {#each productos as producto (producto.id)}
 <div class="card-overlay-hover" data-producto={producto.id}>
           <div class="card-img-box">
-            <img src={assetUrl(producto.imagen)} alt={producto.nombre} loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&amp;auto=format&amp;fit=crop&amp;q=80';">
+            <img src={assetUrl(producto.imagen)} alt={producto.nombre} loading="lazy" on:error|once={(event) => { event.currentTarget.setAttribute('src', 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80'); }}>
           </div>
           <div class="card-badge-flotante">
             <span>{producto.precio}</span>
